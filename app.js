@@ -33,9 +33,11 @@ const server = http.createServer((req, res) => {
   });
 
   const authStatus = authenticate(secretKey);
-  f += `\nAuthentification status: ${authStatus}`;
+  f += `\nAuthentication Firststatus: ${authStatus}`;
 
   res.end(f);
 });
 
-server.listen(port, hostname, () => {});
+server.listen(port, hostname, () => {
+  console.log(`Server is running on port ${port}`);
+});
