@@ -1,7 +1,7 @@
 require("dotenv").config({ path: "./.env" });
 const fs = require("fs");
 
-console.log(`Enviroment: ${process.env.NODE_ENV}`);
+console.log(`Environment: ${process.env.NODE_ENV}`);
 
 const secretKey = process.env.SECRET_KEY;
 console.log(`The secret key is: ${secretKey}`);
@@ -33,7 +33,7 @@ const server = http.createServer((req, res) => {
   });
 
   const authStatus = authenticate(secretKey);
-  f += `\nAuthentication Firststatus: ${authStatus}`;
+  f += `\nAuthentication status: ${authStatus}`;
 
   res.end(f);
 });
